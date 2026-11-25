@@ -13,6 +13,46 @@ Une erreur de calcul fait perdre de l'argent ou fausse les factures.
 Chaque changement doit donc être testé automatiquement,
 puis ne passer en production qu'après approbation.
 
+## Avancement par semaine
+
+**Où en sommes-nous : semaine 3 (pipeline CI).**
+
+### Semaine 1 : idée et application
+
+- [x] Application Java : calculs TTC, remise, total
+- [x] Serveur HTTP avec `/health` qui répond `OK`
+- [x] Dépôt GitHub public, commits à mon nom
+- [x] README avec le scénario
+- [x] Première pull request fusionnée
+- [ ] Binôme à ajouter en collaborateur dès sa désignation (l'enseignant autorise à travailler seul en attendant)
+- [ ] Idée et scénario validés par l'enseignant
+
+### Semaine 2 : tests et image
+
+- [x] 7 tests unitaires qui passent (`PrixTest`)
+- [x] 5 tests HTTP qui passent (`ServerTest`)
+- [x] `docker build` et `docker run` à la main
+
+### Semaine 3 : pipeline CI (fonctionnalités 1 à 8)
+
+- [ ] Jenkinsfile dans Git, job « Pipeline script from SCM »
+- [ ] Build
+- [ ] Tests en parallèle (unitaires et HTTP)
+- [ ] Rapports JUnit
+- [ ] Paramètres `DEPLOY_ENV` et un second paramètre
+- [ ] Artefacts avec fingerprint
+- [ ] Image Docker `1.0.N`, seulement si le build est vert
+- [ ] Push sur Docker Hub
+
+### Semaine 4 : livraison continue (fonctionnalités 9 à 12)
+
+- [ ] Staging sur le port 8081 avec smoke test
+- [ ] Production sur le port 8082 après approbation
+- [ ] E-mail de succès et d'échec (Mailpit)
+- [ ] `cleanWs()` en fin de run
+- [ ] Bonus : scan Trivy, rollback, HEALTHCHECK, pollSCM, timeouts
+- [ ] Rapport `report.pdf`, captures d'écran, démo de 5 minutes
+
 ## Adresses de l'application
 
 | Adresse | Réponse | Exemple |
